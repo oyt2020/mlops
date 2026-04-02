@@ -22,7 +22,7 @@ mlflow.set_experiment(experiment_name)
 
 # ── 1. 데이터 로드 ────────────────────────────────────────────
 try:
-    df = pd.read_csv("data/iris_data.csv")
+    df = pd.read_csv("data/titanic.csv")
     df = df.select_dtypes(include=['number']).dropna()
     X = df.drop('target', axis=1)
     y = df['target']
